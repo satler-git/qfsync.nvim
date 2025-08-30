@@ -1,0 +1,1 @@
+# qfsync.nvim
