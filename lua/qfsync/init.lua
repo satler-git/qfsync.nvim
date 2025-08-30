@@ -60,6 +60,7 @@ function M.add_marks()
 			item.user_data.ext_id = vim.api.nvim_buf_set_extmark(item.bufnr, mark_ns, start_row, start_col, {
 				end_row = end_row,
 				end_col = end_col,
+				strict = false,
 				-- -- debug
 				-- hl_group = "QfSyncDebugHighlight",
 				-- virt_text = { { "▶", "QfSyncDebugHighlight" } },
