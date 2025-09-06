@@ -49,6 +49,10 @@ function M.add_marks()
 	for _, item in ipairs(qf) do
 		if not (item.user_data and item.user_data.ext_id) then
 			-- まだないからはやす
+			if not vim.fn.bufloaded(item.bufnr) then
+				vim.fn.bufnr(item.bufnr)
+			end
+
 			local start_row = item.lnum - 1
 			local start_col = item.col - 1
 
